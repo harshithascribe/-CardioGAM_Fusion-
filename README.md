@@ -1,15 +1,5 @@
 # CardioGAM-Fusion++: Advanced AI-Powered Cardiovascular Risk Assessment System
 
-**Final Year Project - Computer Science/Information Technology**
-
-**Submitted by:** [Your Name]  
-**Roll Number:** [Your Roll Number]  
-**College:** [Your College Name]  
-**Department:**Information Technology  
-**Academic Year:** [Year]  
-**Project Supervisor:** [Supervisor Name]  
-
----
 
 ## Project Overview
 
@@ -420,12 +410,10 @@ pytest -k "model" -v
 pytest --cov=src --cov-report=html
 ```
 
-## License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
 ## Contact
 For questions or collaborations, please contact the development team.
 
 ---
 
 **CardioGAM-Fusion++**: Revolutionizing cardiovascular risk assessment through advanced machine learning and comprehensive clinical decision support.
+
