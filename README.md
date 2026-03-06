@@ -1,30 +1,30 @@
-# CardioGAM-Fusion++: Advanced AI-Powered Cardiovascular Risk Assessment System
+CardioGAM-Fusion++: Advanced AI-Powered Cardiovascular Risk Assessment System
 
 
-## Project Overview
+Project Overview
 
 CardioGAM-Fusion++ represents a comprehensive cardiovascular risk assessment platform that integrates advanced machine learning ensemble techniques with a user-friendly web interface and robust database management system. The system achieves **99.80% prediction accuracy** through a sophisticated multi-modal pipeline that combines Autoencoder for ECG feature extraction, Generalized Additive Models (GAM) for tabular data analysis, Random Forest for residual modeling, and a meta-model for final ensemble predictions.
 
 This project demonstrates the practical application of artificial intelligence and machine learning in healthcare, specifically addressing the critical need for accurate and reliable cardiovascular risk assessment tools in clinical settings.
 
-## Features
-- **Interactive Web Dashboard**: Complete multi-page web application with user authentication, database management, and role-based access control
-- **Advanced ML Ensemble**: Four-model pipeline (Autoencoder + GAM + RF + Meta Model) for superior accuracy with deterministic predictions
-- **Real-time Predictions**: Instant risk assessment with confidence scores, synthetic ECG generation, and comprehensive error handling
-- **User Management System**: Secure authentication with login/signup/forgot password, role-based access (Admin, Doctor, Nurse), and password hashing
-- **Patient Assessment Database**: Complete patient record management with ECG features, risk history, search/filter capabilities, and audit trails
-- **Data Visualization**: Interactive charts, histograms, scatter plots, 3D visualizations, and medical-specific analytics for comprehensive data analysis
-- **ECG Visualization & Analysis**: Real-time ECG waveform generation, lead-specific display, and feature extraction for 12-lead synthetic ECG
-- **Advanced Analytics Dashboard**: Doctor-specific visualizations including ECG analysis, cardiac risk heatmaps, clinical decision trees, and predictive modeling
-- **Comprehensive Testing Suite**: Full test coverage with model validation, prediction consistency, dashboard functionality, and database operations
-- **Production-Ready Architecture**: Modular design with proper error handling, logging, input validation, and scalability
-- **Advanced Analytics**: Risk stratification, predictive modeling, statistical analysis, correlation heatmaps, and trend forecasting
-- **Export Capabilities**: CSV, Excel, and PDF report generation with comprehensive patient history exports
-- **Settings & Preferences**: User profile management, password changes, theme/language preferences, and data management tools
-- **Multi-language Support**: Internationalization framework for global deployment
-- **Mobile-Responsive Design**: Optimized for all device types with Bootstrap styling
+Features
+- Interactive Web Dashboard: Complete multi-page web application with user authentication, database management, and role-based access control
+- Advanced ML Ensemble: Four-model pipeline (Autoencoder + GAM + RF + Meta Model) for superior accuracy with deterministic predictions
+- Real-time Predictions: Instant risk assessment with confidence scores, synthetic ECG generation, and comprehensive error handling
+- User Management System: Secure authentication with login/signup/forgot password, role-based access (Admin, Doctor, Nurse), and password hashing
+- Patient Assessment Database: Complete patient record management with ECG features, risk history, search/filter capabilities, and audit trails
+- Data Visualization: Interactive charts, histograms, scatter plots, 3D visualizations, and medical-specific analytics for comprehensive data analysis
+- ECG Visualization & Analysis: Real-time ECG waveform generation, lead-specific display, and feature extraction for 12-lead synthetic ECG
+- Advanced Analytics Dashboard: Doctor-specific visualizations including ECG analysis, cardiac risk heatmaps, clinical decision trees, and predictive modeling
+- Comprehensive Testing Suite: Full test coverage with model validation, prediction consistency, dashboard functionality, and database operations
+- Production-Ready Architecture: Modular design with proper error handling, logging, input validation, and scalability
+- Advanced Analytics: Risk stratification, predictive modeling, statistical analysis, correlation heatmaps, and trend forecasting
+- Export Capabilities: CSV, Excel, and PDF report generation with comprehensive patient history exports
+- Settings & Preferences: User profile management, password changes, theme/language preferences, and data management tools
+- Multi-language Support: Internationalization framework for global deployment
+- Mobile-Responsive Design: Optimized for all device types with Bootstrap styling
 
-## Architecture
+Architecture
 ```
 ├── src/
 │   ├── dashboard/
@@ -53,22 +53,22 @@ This project demonstrates the practical application of artificial intelligence a
 └── TODO*.md                       # Project documentation
 ```
 
-## Installation & Setup
+Installation & Setup
 
-### Prerequisites
+Prerequisites
 - Python 3.8 or higher
 - pip package manager
 - Virtual environment support
 
-### Step-by-Step Installation
+Step-by-Step Installation
 
-1. **Clone the repository**
+1. Clone the repository
    ```bash
    git clone <repository-url>
    cd CardioGAM-Fusion
    ```
 
-2. **Create virtual environment**
+2. Create virtual environment
    ```bash
    # Windows
    python -m venv venv
@@ -79,22 +79,22 @@ This project demonstrates the practical application of artificial intelligence a
    source venv/bin/activate
    ```
 
-3. **Install dependencies**
+3. Install dependencies
    ```bash
    pip install -r requirements.txt
    ```
 
-4. **Initialize database**
+4. Initialize database
    ```bash
    python init_db.py
    ```
 
-5. **Train models (optional - pre-trained models included)**
+5. Train models (optional - pre-trained models included)
    ```bash
    python src/model/train_models.py
    ```
 
-6. **Run comprehensive tests**
+6. Run comprehensive tests
    ```bash
    # Test model loading
    python test_models.py
@@ -115,44 +115,44 @@ This project demonstrates the practical application of artificial intelligence a
    python test_dashboard_comprehensive.py
    ```
 
-7. **Run the dashboard**
+7. Run the dashboard
    ```bash
    python src/dashboard/app.py
    ```
 
-8. **Access the application**
+8. Access the application
    Open http://localhost:8050 in your web browser
-   - **Default Login**: Username: `admin`, Password: `admin123`
+   - Default Login: Username: `admin`, Password: `admin123`
 
-## Usage Guide
+Usage Guide
 
-### Dashboard Features
-- **Patient Data Input**: Enter age, blood pressure, cholesterol, and heart rate
-- **Risk Prediction**: Click "Assess Cardiovascular Risk" to get comprehensive risk assessment
-- **Data Visualization**: View risk distribution, scatter plots, and 3D visualizations
-- **Patient History**: Search, filter, and manage patient records
-- **Advanced Analytics**: Risk trends, predictive modeling, and statistical analysis
-- **ECG Visualization**: Generate and analyze synthetic ECG waveforms
-- **Export Reports**: Generate PDF reports, CSV/Excel exports
-- **User Management**: Role-based access control and profile management
+Dashboard Features
+- Patient Data Input: Enter age, blood pressure, cholesterol, and heart rate
+- Risk Prediction: Click "Assess Cardiovascular Risk" to get comprehensive risk assessment
+- Data Visualization: View risk distribution, scatter plots, and 3D visualizations
+- Patient History: Search, filter, and manage patient records
+- Advanced Analytics: Risk trends, predictive modeling, and statistical analysis
+- ECG Visualization: Generate and analyze synthetic ECG waveforms
+- Export Reports: Generate PDF reports, CSV/Excel exports
+- User Management: Role-based access control and profile management
 
-### Model Information
-**Hybrid ML Approach**: Autoencoder + GAM + RF + Meta Model Ensemble
+Model Information
+Hybrid ML Approach: Autoencoder + GAM + RF + Meta Model Ensemble
 
-### API Usage
+API Usage
 The dashboard can be extended for API access by modifying the callback functions in `src/dashboard/app.py`.
 
-## Model Pipeline Details
+Model Pipeline Details
 
-1. **Data Preprocessing**: ECG features extracted from 12-lead signals using synthetic generation
-2. **Autoencoder**: Dimensionality reduction (24 → 6 → 24) for ECG feature compression
-3. **GAM**: Baseline prediction on tabular features (Age, BP, Cholesterol, HR)
-4. **Random Forest**: Modeling residuals on autoencoder latent features
-5. **Meta Model**: XGBoost ensemble combining GAM and RF predictions for final risk score
+1. Data Preprocessing: ECG features extracted from 12-lead signals using synthetic generation
+2. Autoencoder: Dimensionality reduction (24 → 6 → 24) for ECG feature compression
+3. GAM: Baseline prediction on tabular features (Age, BP, Cholesterol, HR)
+4. Random Forest: Modeling residuals on autoencoder latent features
+5. Meta Model: XGBoost ensemble combining GAM and RF predictions for final risk score
 
-## Dependencies & Requirements
+Dependencies & Requirements
 
-### Core Dependencies
+Core Dependencies
 ```
 numpy==1.24.3              # Numerical computing
 pandas==2.0.3              # Data manipulation
@@ -164,7 +164,7 @@ plotly==5.15.0             # Data visualization
 joblib==1.3.2              # Model serialization
 ```
 
-### Extended Dependencies
+Extended Dependencies
 ```
 dash-bootstrap-components==1.5.0  # UI components
 flask-login==0.6.3                # User authentication
@@ -177,38 +177,38 @@ pytest==7.4.0                     # Testing framework
 selenium==4.11.2                  # Web testing
 ```
 
-## Data & Models
+Data & Models
 
-### Dataset Information
-- **Total Samples**: 1,000 synthetic patient records
-- **Features**: 30 (4 clinical + 24 ECG features from 12 leads)
-- **Risk Distribution**: Balanced across Low/Moderate/High risk categories
-- **ECG Generation**: Deterministic 12-lead synthetic ECG based on heart rate
+Dataset Information
+- Total Samples: 1,000 synthetic patient records
+- Features: 30 (4 clinical + 24 ECG features from 12 leads)
+- Risk Distribution: Balanced across Low/Moderate/High risk categories
+- ECG Generation: Deterministic 12-lead synthetic ECG based on heart rate
 
-### Model Files
+Model Files
 - `autoencoder.pt`: PyTorch autoencoder (MSE: 0.000019)
 - `gam_model.pkl`: GAM model (Accuracy: 97.5%, AUC: 0.997)
 - `rf_residual.pkl`: Random Forest (Accuracy: 100%, R²: 0.816)
 - `meta_model.pkl`: XGBoost ensemble (Accuracy: 99.8%, AUC: 1.000)
 
-## Performance Metrics
+Performance Metrics
 
-### Model Performance
+Model Performance
 | Model | Accuracy | Precision | Recall | F1-Score | AUC-ROC | MSE | R² |
 |-------|----------|-----------|--------|----------|---------|-----|----|
 | GAM | 97.50% | 97.48% | 98.31% | 97.89% | 99.67% | - | - |
 | Random Forest | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% | 0.045 | 0.816 |
-| **Meta Model** | **99.80%** | **100.00%** | **99.63%** | **99.82%** | **100.00%** | 0.003 | 0.989 |
+| Meta Model | 99.80% | 100.00% | 99.63% | 99.82% | 100.00% | 0.003 | 0.989 |
 
-### System Performance
-- **Prediction Accuracy**: 99.80% on test dataset
-- **Response Time**: < 2 seconds per prediction
-- **Memory Usage**: ~500MB (including loaded models)
-- **Concurrent Users**: Supports up to 50 simultaneous users
-- **Database Performance**: < 100ms average query time
-- **Deterministic Predictions**: ✅ Consistent results across runs
+System Performance
+- Prediction Accuracy: 99.80% on test dataset
+- Response Time: < 2 seconds per prediction
+- Memory Usage: ~500MB (including loaded models)
+- Concurrent Users: Supports up to 50 simultaneous users
+- Database Performance: < 100ms average query time
+- Deterministic Predictions: ✅ Consistent results across runs
 
-### Test Results Summary
+Test Results Summary
 ```
 ✅ Model Loading Tests: PASSED
 ✅ Full Model Evaluation: PASSED (99.80% accuracy)
@@ -219,9 +219,9 @@ selenium==4.11.2                  # Web testing
 ✅ Export Functionality: PASSED
 ```
 
-## Commands Used in Development
+Commands Used in Development
 
-### Environment Setup
+Environment Setup
 ```bash
 # Create virtual environment
 python -m venv venv
@@ -239,7 +239,7 @@ pip install -r requirements.txt
 pip list
 ```
 
-### Database Operations
+Database Operations
 ```bash
 # Initialize database
 python init_db.py
@@ -248,7 +248,8 @@ python init_db.py
 python -c "from src.dashboard.models import db; print('Database initialized')"
 ```
 
-### Model Training & Testing
+
+Model Training & Testing
 ```bash
 # Train all models
 python src/model/train_models.py
@@ -272,7 +273,7 @@ python test_database_auth.py
 python test_dashboard_comprehensive.py
 ```
 
-### Application Execution
+Application Execution
 ```bash
 # Run main dashboard
 python src/dashboard/app.py
@@ -284,7 +285,7 @@ python -m flask run --debug
 # Open http://localhost:8050 in browser
 ```
 
-### Data Generation
+Data Generation
 ```bash
 # Generate synthetic data
 python src/generate_data/generate_data.py
@@ -293,7 +294,7 @@ python src/generate_data/generate_data.py
 python src/ecg/synthetic_ecg.py
 ```
 
-### Testing Commands
+Testing Commands
 ```bash
 # Run all tests
 pytest
@@ -308,9 +309,9 @@ pytest --cov=src --cov-report=html
 pytest test_web_ui.py
 ```
 
-## Project Structure & File Descriptions
+Project Structure & File Descriptions
 
-### Core Application Files
+Core Application Files
 - `src/dashboard/app.py`: Main Dash application (2433 lines) with full UI and callbacks
 - `src/dashboard/models.py`: SQLAlchemy database models for users and assessments
 - `src/model/autoencoder.py`: PyTorch autoencoder implementation
@@ -318,7 +319,7 @@ pytest test_web_ui.py
 - `src/ecg/synthetic_ecg.py`: Deterministic ECG generation
 - `init_db.py`: Database initialization script
 
-### Test Files
+Test Files
 - `test_models.py`: Model loading verification
 - `test_full_model.py`: Complete pipeline evaluation
 - `test_consistency.py`: Prediction determinism testing
@@ -326,18 +327,18 @@ pytest test_web_ui.py
 - `test_database_auth.py`: Authentication system testing
 - `test_dashboard_comprehensive.py`: Full dashboard testing
 
-### Utility Files
+Utility Files
 - `src/dashboard/medical_visualizations.py`: Medical-specific charts
 - `src/dashboard/doctor_visualizations.py`: Advanced analytics
 - `src/dashboard/error_handlers.py`: Comprehensive error handling
 - `src/dashboard/export_utils.py`: Report generation
 - `src/dashboard/search_filters.py`: Advanced search functionality
 
-## Troubleshooting
+Troubleshooting
 
-### Common Issues & Solutions
+Common Issues & Solutions
 
-1. **Model Loading Errors**
+1. Model Loading Errors
    ```bash
    # Ensure model files exist
    ls -la models/
@@ -346,7 +347,7 @@ pytest test_web_ui.py
    pip install torch --upgrade
    ```
 
-2. **Database Connection Issues**
+2. Database Connection Issues
    ```bash
    # Reinitialize database
    python init_db.py
@@ -355,7 +356,7 @@ pytest test_web_ui.py
    ls -la cardio_fusion.db
    ```
 
-3. **Import Errors**
+3. Import Errors
    ```bash
    # Install missing dependencies
    pip install -r requirements.txt
@@ -364,7 +365,7 @@ pytest test_web_ui.py
    python --version
    ```
 
-4. **Port Already in Use**
+4. Port Already in Use
    ```bash
    # Kill process on port 8050
    lsof -ti:8050 | xargs kill -9
@@ -373,7 +374,7 @@ pytest test_web_ui.py
    python -c "import os; os.environ['PORT']='8051'; exec(open('src/dashboard/app.py').read())"
    ```
 
-## Future Enhancements
+Future Enhancements
 - Integration with real ECG devices
 - Deep learning models (CNN, LSTM) for ECG analysis
 - Multi-modal fusion with imaging data
@@ -385,7 +386,7 @@ pytest test_web_ui.py
 - Advanced anomaly detection
 - Personalized treatment recommendations
 
-## Contributing
+Contributing
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/new-feature`)
 3. Make changes and test thoroughly
@@ -394,7 +395,7 @@ pytest test_web_ui.py
 6. Push to branch (`git push origin feature/new-feature`)
 7. Submit a pull request
 
-## Testing
+Testing
 Run the comprehensive test suite:
 ```bash
 # Run all tests
@@ -415,5 +416,6 @@ For questions or collaborations, please contact the development team.
 
 ---
 
-**CardioGAM-Fusion++**: Revolutionizing cardiovascular risk assessment through advanced machine learning and comprehensive clinical decision support.
+CardioGAM-Fusion++**: Revolutionizing cardiovascular risk assessment through advanced machine learning and comprehensive clinical decision support.
+
 
